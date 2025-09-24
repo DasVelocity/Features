@@ -2294,7 +2294,7 @@
           },
           "<font color=\"#8000FF\">G</font><font color=\"#9A00FF\">o</font><font color=\"#B200FF\">d</font><font color=\"#C500FF\">m</font><font color=\"#B200FF\">o</font><font color=\"#9A00FF\">d</font><font color=\"#8000FF\">e</font>": {
             "type": "Groupbox",
-            "name": "<font color=\"#8000FF\">G</font><font color=\"#9A00FF\">o</font><font color=\"#B200FF\">d</font><font color=\"#C500FF\">m</font><font color=\"#B200FF\">o</font><font color=\"#9A00FF\">d</font><font color=\"#8000FF\">e</font>",
+            "name": "Godmode",
             "order": 1,
             "side": "Left",
             "dependencyBoxes": [],
