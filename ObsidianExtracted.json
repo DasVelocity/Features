@@ -3,7 +3,12 @@
     "tabStructure": {
       "Visuals": {
         "tabboxes": {
-          "Right": [],
+          "Right": {
+            "Left Tabbox": [
+              "Visuals",
+              "Effects"
+            ]
+          },
           "Left": [],
           "Unknown": []
         },
@@ -26,44 +31,15 @@
         },
         "groupboxes": {
           "Right": [
+            "April Fools",
             "General",
             "Hotel -"
           ],
           "Left": [
+            "The Hotel",
+            "Seek Stuff",
             "The Mines",
-            "Backdoors",
-            "Great Outdoors",
-            "The Hotel"
-          ],
-          "Unknown": []
-        }
-      },
-      "Home": {
-        "tabboxes": {
-          "Right": [],
-          "Left": [],
-          "Unknown": []
-        },
-        "groupboxes": {
-          "Right": [
-            "Status"
-          ],
-          "Left": [
-            "Welcome"
-          ],
-          "Unknown": []
-        }
-      },
-      "Addons": {
-        "tabboxes": {
-          "Right": [],
-          "Left": [],
-          "Unknown": []
-        },
-        "groupboxes": {
-          "Right": [],
-          "Left": [
-            "Addons"
+            "Backdoors"
           ],
           "Unknown": []
         }
@@ -83,6 +59,36 @@
             "Menu Settings",
             "Appearance",
             "Themes"
+          ],
+          "Unknown": []
+        }
+      },
+      "Addons": {
+        "tabboxes": {
+          "Right": [],
+          "Left": [],
+          "Unknown": []
+        },
+        "groupboxes": {
+          "Right": [],
+          "Left": [
+            "Addons"
+          ],
+          "Unknown": []
+        }
+      },
+      "Start": {
+        "tabboxes": {
+          "Right": [],
+          "Left": [],
+          "Unknown": []
+        },
+        "groupboxes": {
+          "Right": [
+            "Status"
+          ],
+          "Left": [
+            "Welcome"
           ],
           "Unknown": []
         }
@@ -111,13 +117,12 @@
         },
         "groupboxes": {
           "Right": [
-            "Visual Effects",
+            "Walkspeed",
             "Automation"
           ],
           "Left": [
-            "Walkspeed",
-            "Godmode",
-            "Movement"
+            "Movement",
+            "Godmode"
           ],
           "Unknown": []
         }
@@ -148,7 +153,225 @@
       "dependencyGroupboxes": [],
       "name": "Visuals",
       "tabboxes": {
-        "Right": [],
+        "Right": {
+          "Left Tabbox": {
+            "type": "Tabbox",
+            "name": "Left Tabbox",
+            "side": "Right",
+            "tabs": {
+              "Visuals": {
+                "type": "Tab",
+                "name": "Visuals",
+                "order": 1,
+                "dependencyBoxes": [],
+                "elements": [
+                  {
+                    "visible": true,
+                    "type": "Toggle",
+                    "disabled": false,
+                    "value": false,
+                    "text": "Fullbright",
+                    "index": 1,
+                    "properties": {
+                      "changed": true,
+                      "risky": false,
+                      "callback": true,
+                      "addons": [
+                        {
+                          "value": {
+                            "b": 255,
+                            "g": 255,
+                            "r": 255
+                          },
+                          "type": "ColorPicker",
+                          "title": "Color Tint"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "Divider",
+                    "index": 2,
+                    "properties": []
+                  },
+                  {
+                    "visible": true,
+                    "type": "Toggle",
+                    "disabled": false,
+                    "value": false,
+                    "text": "Third Person View",
+                    "index": 3,
+                    "properties": {
+                      "changed": true,
+                      "risky": false,
+                      "callback": true,
+                      "addons": [
+                        {
+                          "value": "V",
+                          "type": "KeyPicker",
+                          "mode": "Toggle",
+                          "text": "Third Person"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "visible": true,
+                    "type": "Slider",
+                    "disabled": false,
+                    "value": 19,
+                    "text": "Third Person Distance",
+                    "index": 4,
+                    "properties": {
+                      "min": 5,
+                      "prefix": "",
+                      "compact": true,
+                      "max": 30,
+                      "suffix": "",
+                      "rounding": 0
+                    }
+                  },
+                  {
+                    "visible": true,
+                    "type": "Slider",
+                    "disabled": false,
+                    "value": 0,
+                    "text": "Third Person Side Offset",
+                    "index": 5,
+                    "properties": {
+                      "min": -5,
+                      "prefix": "",
+                      "compact": true,
+                      "max": 5,
+                      "suffix": "",
+                      "rounding": 1
+                    }
+                  },
+                  {
+                    "visible": true,
+                    "type": "Slider",
+                    "disabled": false,
+                    "value": 0,
+                    "text": "Third Person Height Offset",
+                    "index": 6,
+                    "properties": {
+                      "min": -5,
+                      "prefix": "",
+                      "compact": true,
+                      "max": 5,
+                      "suffix": "",
+                      "rounding": 1
+                    }
+                  },
+                  {
+                    "type": "Divider",
+                    "index": 7,
+                    "properties": []
+                  },
+                  {
+                    "visible": true,
+                    "type": "Slider",
+                    "disabled": false,
+                    "value": 70,
+                    "text": "Field of View",
+                    "index": 8,
+                    "properties": {
+                      "min": 0,
+                      "prefix": "",
+                      "compact": true,
+                      "max": 120,
+                      "suffix": "",
+                      "rounding": 1
+                    }
+                  },
+                  {
+                    "type": "Divider",
+                    "index": 9,
+                    "properties": []
+                  }
+                ]
+              },
+              "Effects": {
+                "type": "Tab",
+                "name": "Effects",
+                "order": 2,
+                "dependencyBoxes": [],
+                "elements": [
+                  {
+                    "visible": true,
+                    "type": "Toggle",
+                    "disabled": false,
+                    "value": false,
+                    "text": "Avoid Void Effect",
+                    "index": 1,
+                    "properties": {
+                      "changed": true,
+                      "risky": false,
+                      "callback": true,
+                      "addons": []
+                    }
+                  },
+                  {
+                    "visible": true,
+                    "type": "Toggle",
+                    "disabled": false,
+                    "value": false,
+                    "text": "Avoid Haste Screen Effects",
+                    "index": 2,
+                    "properties": {
+                      "changed": true,
+                      "risky": false,
+                      "callback": true,
+                      "addons": []
+                    }
+                  },
+                  {
+                    "visible": true,
+                    "type": "Toggle",
+                    "disabled": false,
+                    "value": false,
+                    "text": "Disable Firedamp",
+                    "index": 3,
+                    "properties": {
+                      "changed": true,
+                      "risky": false,
+                      "callback": true,
+                      "addons": []
+                    }
+                  },
+                  {
+                    "visible": true,
+                    "type": "Toggle",
+                    "disabled": false,
+                    "value": false,
+                    "text": "Remove Mines Atmosphere",
+                    "index": 4,
+                    "properties": {
+                      "changed": true,
+                      "risky": false,
+                      "callback": true,
+                      "addons": []
+                    }
+                  },
+                  {
+                    "visible": true,
+                    "type": "Toggle",
+                    "disabled": false,
+                    "value": false,
+                    "text": "Remove Oxygen/Sanity Effects",
+                    "index": 5,
+                    "properties": {
+                      "changed": true,
+                      "risky": false,
+                      "callback": true,
+                      "addons": []
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
         "Left": [],
         "Unknown": []
       },
@@ -174,8 +397,32 @@
                 "type": "Toggle",
                 "disabled": false,
                 "value": false,
-                "text": "Figure ESP",
+                "text": "Seek ESP",
                 "index": 1,
+                "properties": {
+                  "changed": true,
+                  "risky": false,
+                  "callback": true,
+                  "addons": [
+                    {
+                      "value": {
+                        "b": 0,
+                        "g": 0,
+                        "r": 255
+                      },
+                      "type": "ColorPicker",
+                      "title": "Seek Color"
+                    }
+                  ]
+                }
+              },
+              {
+                "visible": true,
+                "type": "Toggle",
+                "disabled": false,
+                "value": false,
+                "text": "Figure ESP",
+                "index": 2,
                 "properties": {
                   "changed": true,
                   "risky": false,
@@ -199,7 +446,7 @@
                 "disabled": false,
                 "value": false,
                 "text": "Ambush ESP",
-                "index": 2,
+                "index": 3,
                 "properties": {
                   "changed": true,
                   "risky": false,
@@ -223,7 +470,7 @@
                 "disabled": false,
                 "value": false,
                 "text": "Rush ESP",
-                "index": 3,
+                "index": 4,
                 "properties": {
                   "changed": true,
                   "risky": false,
@@ -247,7 +494,7 @@
                 "disabled": false,
                 "value": false,
                 "text": "Snare ESP",
-                "index": 4,
+                "index": 5,
                 "properties": {
                   "changed": true,
                   "risky": false,
@@ -271,7 +518,7 @@
                 "disabled": false,
                 "value": false,
                 "text": "Giggle ESP",
-                "index": 5,
+                "index": 6,
                 "properties": {
                   "changed": true,
                   "risky": false,
@@ -295,7 +542,7 @@
                 "disabled": false,
                 "value": false,
                 "text": "Eyestalk ESP",
-                "index": 6,
+                "index": 7,
                 "properties": {
                   "changed": true,
                   "risky": false,
@@ -319,7 +566,7 @@
                 "disabled": false,
                 "value": false,
                 "text": "Mandrake ESP",
-                "index": 7,
+                "index": 8,
                 "properties": {
                   "changed": true,
                   "risky": false,
@@ -343,7 +590,7 @@
                 "disabled": false,
                 "value": false,
                 "text": "Groundskeeper ESP",
-                "index": 8,
+                "index": 9,
                 "properties": {
                   "changed": true,
                   "risky": false,
@@ -367,7 +614,7 @@
                 "disabled": false,
                 "value": false,
                 "text": "Blitz ESP",
-                "index": 9,
+                "index": 10,
                 "properties": {
                   "changed": true,
                   "risky": false,
@@ -767,6 +1014,43 @@
       "icon": "BoxIcon",
       "groupboxes": {
         "Right": {
+          "April Fools": {
+            "type": "Groupbox",
+            "name": "April Fools",
+            "order": 2,
+            "side": "Right",
+            "dependencyBoxes": [],
+            "elements": [
+              {
+                "visible": true,
+                "type": "Toggle",
+                "disabled": false,
+                "value": false,
+                "text": "Anti Banana",
+                "index": 1,
+                "properties": {
+                  "changed": true,
+                  "risky": false,
+                  "callback": true,
+                  "addons": []
+                }
+              },
+              {
+                "visible": true,
+                "type": "Toggle",
+                "disabled": false,
+                "value": false,
+                "text": "Anti-Jeff",
+                "index": 2,
+                "properties": {
+                  "changed": true,
+                  "risky": false,
+                  "callback": true,
+                  "addons": []
+                }
+              }
+            ]
+          },
           "General": {
             "type": "Groupbox",
             "name": "General",
@@ -776,10 +1060,26 @@
             "elements": [
               {
                 "visible": true,
+                "type": "Slider",
+                "disabled": false,
+                "value": 1,
+                "text": "Interaction Boost",
+                "index": 1,
+                "properties": {
+                  "min": 1,
+                  "prefix": "",
+                  "compact": true,
+                  "max": 2,
+                  "suffix": "",
+                  "rounding": 1
+                }
+              },
+              {
+                "visible": true,
                 "type": "Button",
                 "disabled": false,
                 "text": "Get Glitch Cube",
-                "index": 1,
+                "index": 2,
                 "properties": {
                   "risky": false,
                   "func": true
@@ -787,7 +1087,7 @@
               },
               {
                 "type": "Divider",
-                "index": 2,
+                "index": 3,
                 "properties": []
               },
               {
@@ -796,7 +1096,7 @@
                 "disabled": false,
                 "value": false,
                 "text": "Infinite Crucifix",
-                "index": 3,
+                "index": 4,
                 "properties": {
                   "changed": true,
                   "risky": true,
@@ -810,7 +1110,7 @@
                 "disabled": false,
                 "value": false,
                 "text": "Infinite Items",
-                "index": 4,
+                "index": 5,
                 "properties": {
                   "changed": true,
                   "risky": false,
@@ -820,7 +1120,7 @@
               },
               {
                 "type": "Divider",
-                "index": 5,
+                "index": 6,
                 "properties": []
               },
               {
@@ -828,7 +1128,7 @@
                 "type": "Button",
                 "disabled": false,
                 "text": "Get NVCS-3000",
-                "index": 6,
+                "index": 7,
                 "properties": {
                   "risky": false,
                   "func": true
@@ -836,7 +1136,7 @@
               },
               {
                 "type": "Divider",
-                "index": 7,
+                "index": 8,
                 "properties": []
               },
               {
@@ -845,7 +1145,7 @@
                 "disabled": false,
                 "value": false,
                 "text": "No Cutscenes",
-                "index": 8,
+                "index": 9,
                 "properties": {
                   "changed": true,
                   "risky": false,
@@ -859,7 +1159,7 @@
                 "disabled": false,
                 "value": false,
                 "text": "Auto Hide V2",
-                "index": 9,
+                "index": 10,
                 "properties": {
                   "changed": true,
                   "risky": false,
@@ -873,7 +1173,7 @@
                 "disabled": false,
                 "value": 1.5,
                 "text": "Prediction Time",
-                "index": 10,
+                "index": 11,
                 "properties": {
                   "min": 0.1,
                   "prefix": "",
@@ -889,7 +1189,7 @@
                 "disabled": false,
                 "value": 1,
                 "text": "Distance Multiplier",
-                "index": 11,
+                "index": 12,
                 "properties": {
                   "min": 1,
                   "prefix": "",
@@ -901,7 +1201,7 @@
               },
               {
                 "type": "Divider",
-                "index": 12,
+                "index": 13,
                 "properties": []
               },
               {
@@ -910,20 +1210,6 @@
                 "disabled": false,
                 "value": false,
                 "text": "Door Reach",
-                "index": 13,
-                "properties": {
-                  "changed": true,
-                  "risky": false,
-                  "callback": true,
-                  "addons": []
-                }
-              },
-              {
-                "visible": true,
-                "type": "Toggle",
-                "disabled": false,
-                "value": false,
-                "text": "Instant Interact",
                 "index": 14,
                 "properties": {
                   "changed": true,
@@ -937,11 +1223,25 @@
                 "type": "Toggle",
                 "disabled": false,
                 "value": false,
-                "text": "Auto Interact (LAG WILL FIX SOON!)",
+                "text": "Instant Interact",
                 "index": 15,
                 "properties": {
                   "changed": true,
-                  "risky": true,
+                  "risky": false,
+                  "callback": true,
+                  "addons": []
+                }
+              },
+              {
+                "visible": true,
+                "type": "Toggle",
+                "disabled": false,
+                "value": false,
+                "text": "Auto Interact",
+                "index": 16,
+                "properties": {
+                  "changed": true,
+                  "risky": false,
                   "callback": true,
                   "addons": []
                 }
@@ -952,7 +1252,7 @@
                 "disabled": false,
                 "value": 10,
                 "text": "Auto Interact Distance",
-                "index": 16,
+                "index": 17,
                 "properties": {
                   "min": 5,
                   "prefix": "",
@@ -967,17 +1267,6 @@
                 "type": "Button",
                 "disabled": false,
                 "text": "Revive",
-                "index": 17,
-                "properties": {
-                  "risky": false,
-                  "func": true
-                }
-              },
-              {
-                "visible": true,
-                "type": "Button",
-                "disabled": false,
-                "text": "Reset Character",
                 "index": 18,
                 "properties": {
                   "risky": false,
@@ -988,7 +1277,7 @@
                 "visible": true,
                 "type": "Button",
                 "disabled": false,
-                "text": "Lobby",
+                "text": "Reset Character",
                 "index": 19,
                 "properties": {
                   "risky": false,
@@ -999,7 +1288,7 @@
                 "visible": true,
                 "type": "Button",
                 "disabled": false,
-                "text": "Play Again",
+                "text": "Lobby",
                 "index": 20,
                 "properties": {
                   "risky": false,
@@ -1010,8 +1299,19 @@
                 "visible": true,
                 "type": "Button",
                 "disabled": false,
-                "text": "Bring Dropped Items",
+                "text": "Play Again",
                 "index": 21,
+                "properties": {
+                  "risky": false,
+                  "func": true
+                }
+              },
+              {
+                "visible": true,
+                "type": "Button",
+                "disabled": false,
+                "text": "Bring Dropped Items",
+                "index": 22,
                 "properties": {
                   "risky": false,
                   "func": true,
@@ -1023,24 +1323,10 @@
                 "type": "Button",
                 "disabled": false,
                 "text": "spreedrun timer",
-                "index": 22,
+                "index": 23,
                 "properties": {
                   "risky": false,
                   "func": true
-                }
-              },
-              {
-                "visible": true,
-                "type": "Toggle",
-                "disabled": false,
-                "value": false,
-                "text": "Seek Bridge Cover",
-                "index": 23,
-                "properties": {
-                  "changed": true,
-                  "risky": false,
-                  "callback": true,
-                  "addons": []
                 }
               }
             ]
@@ -1048,7 +1334,7 @@
           "Hotel -": {
             "type": "Groupbox",
             "name": "Hotel -",
-            "order": 2,
+            "order": 3,
             "side": "Right",
             "dependencyBoxes": [],
             "elements": [
@@ -1093,169 +1379,11 @@
                   "callback": true,
                   "addons": []
                 }
-              },
-              {
-                "type": "Divider",
-                "index": 4,
-                "properties": []
-              },
-              {
-                "visible": true,
-                "type": "Toggle",
-                "disabled": false,
-                "value": false,
-                "text": "Godmode",
-                "index": 5,
-                "properties": {
-                  "changed": true,
-                  "risky": false,
-                  "callback": true,
-                  "addons": []
-                }
               }
             ]
           }
         },
         "Left": {
-          "The Mines": {
-            "type": "Groupbox",
-            "name": "The Mines",
-            "order": 2,
-            "side": "Left",
-            "dependencyBoxes": [],
-            "elements": [
-              {
-                "visible": true,
-                "type": "Toggle",
-                "disabled": false,
-                "value": false,
-                "text": "Seek Path",
-                "index": 1,
-                "properties": {
-                  "changed": true,
-                  "risky": false,
-                  "callback": true,
-                  "addons": []
-                }
-              },
-              {
-                "visible": true,
-                "type": "Toggle",
-                "disabled": false,
-                "value": false,
-                "text": "Mute Jeff's Shop Music",
-                "index": 2,
-                "properties": {
-                  "changed": true,
-                  "risky": false,
-                  "callback": true,
-                  "addons": []
-                }
-              },
-              {
-                "visible": true,
-                "type": "Toggle",
-                "disabled": false,
-                "value": false,
-                "text": "Notify Anchor Code",
-                "index": 3,
-                "properties": {
-                  "changed": true,
-                  "risky": false,
-                  "callback": true,
-                  "addons": []
-                }
-              },
-              {
-                "visible": true,
-                "type": "Toggle",
-                "disabled": false,
-                "value": false,
-                "text": "Anticheat Bypass",
-                "index": 4,
-                "properties": {
-                  "changed": true,
-                  "risky": false,
-                  "callback": true,
-                  "addons": []
-                }
-              },
-              {
-                "visible": true,
-                "type": "Toggle",
-                "disabled": false,
-                "value": false,
-                "text": "Remove Mines Atmosphere",
-                "index": 5,
-                "properties": {
-                  "changed": true,
-                  "risky": false,
-                  "callback": true,
-                  "addons": []
-                }
-              },
-              {
-                "visible": true,
-                "type": "Toggle",
-                "disabled": false,
-                "value": false,
-                "text": "Remove Oxygen/Sanity Effects",
-                "index": 6,
-                "properties": {
-                  "changed": true,
-                  "risky": false,
-                  "callback": true,
-                  "addons": []
-                }
-              }
-            ]
-          },
-          "Backdoors": {
-            "type": "Groupbox",
-            "name": "Backdoors",
-            "order": 3,
-            "side": "Left",
-            "dependencyBoxes": [],
-            "elements": [
-              {
-                "visible": true,
-                "type": "Toggle",
-                "disabled": false,
-                "value": false,
-                "text": "Haste Timer",
-                "index": 1,
-                "properties": {
-                  "changed": true,
-                  "risky": false,
-                  "callback": true,
-                  "addons": []
-                }
-              }
-            ]
-          },
-          "Great Outdoors": {
-            "type": "Groupbox",
-            "name": "Great Outdoors",
-            "order": 4,
-            "side": "Left",
-            "dependencyBoxes": [],
-            "elements": [
-              {
-                "visible": true,
-                "type": "Toggle",
-                "disabled": false,
-                "value": false,
-                "text": "Infinite Oxygen",
-                "index": 1,
-                "properties": {
-                  "changed": true,
-                  "risky": false,
-                  "callback": true,
-                  "addons": []
-                }
-              }
-            ]
-          },
           "The Hotel": {
             "type": "Groupbox",
             "name": "The Hotel",
@@ -1278,17 +1406,180 @@
                 }
               },
               {
+                "type": "Divider",
+                "index": 2,
+                "properties": []
+              },
+              {
+                "visible": true,
+                "type": "Button",
+                "disabled": false,
+                "text": "Death Farm V2",
+                "index": 3,
+                "properties": {
+                  "risky": false,
+                  "func": true
+                }
+              },
+              {
+                "visible": true,
+                "type": "Button",
+                "disabled": true,
+                "text": "Knob Farm",
+                "index": 4,
+                "properties": {
+                  "risky": false,
+                  "func": true
+                }
+              }
+            ]
+          },
+          "Seek Stuff": {
+            "type": "Groupbox",
+            "name": "Seek Stuff",
+            "order": 2,
+            "side": "Left",
+            "dependencyBoxes": [],
+            "elements": [
+              {
                 "visible": true,
                 "type": "Toggle",
                 "disabled": false,
                 "value": false,
-                "text": "Remove Figure (FE)",
+                "text": "No Seek Flood Damage",
+                "index": 1,
+                "properties": {
+                  "changed": true,
+                  "risky": false,
+                  "callback": true,
+                  "addons": []
+                }
+              },
+              {
+                "visible": true,
+                "type": "Toggle",
+                "disabled": false,
+                "value": false,
+                "text": "Seek Bridge Cover",
                 "index": 2,
                 "properties": {
                   "changed": true,
                   "risky": false,
                   "callback": true,
                   "addons": []
+                }
+              },
+              {
+                "visible": true,
+                "type": "Toggle",
+                "disabled": false,
+                "value": false,
+                "text": "Seek Path",
+                "index": 3,
+                "properties": {
+                  "changed": true,
+                  "risky": false,
+                  "callback": true,
+                  "addons": []
+                }
+              }
+            ]
+          },
+          "The Mines": {
+            "type": "Groupbox",
+            "name": "The Mines",
+            "order": 3,
+            "side": "Left",
+            "dependencyBoxes": [],
+            "elements": [
+              {
+                "visible": true,
+                "type": "Toggle",
+                "disabled": false,
+                "value": false,
+                "text": "Anticheat Bypass",
+                "index": 1,
+                "properties": {
+                  "changed": true,
+                  "risky": false,
+                  "callback": true,
+                  "addons": []
+                }
+              }
+            ]
+          },
+          "Backdoors": {
+            "type": "Groupbox",
+            "name": "Backdoors",
+            "order": 4,
+            "side": "Left",
+            "dependencyBoxes": [],
+            "elements": [
+              {
+                "visible": true,
+                "type": "Toggle",
+                "disabled": false,
+                "value": false,
+                "text": "Haste Timer",
+                "index": 1,
+                "properties": {
+                  "changed": true,
+                  "risky": false,
+                  "callback": true,
+                  "addons": []
+                }
+              }
+            ]
+          }
+        },
+        "Unknown": []
+      }
+    },
+    "Credits": {
+      "type": "MainTab",
+      "order": 6,
+      "dependencyGroupboxes": [],
+      "name": "Credits",
+      "tabboxes": {
+        "Right": [],
+        "Left": [],
+        "Unknown": []
+      },
+      "warningBox": {
+        "Visible": false,
+        "Title": "WARNING",
+        "IsNormal": false,
+        "Text": "",
+        "LockSize": false
+      },
+      "icon": "DatabaseIcon",
+      "groupboxes": {
+        "Right": {
+          "About Roblox X": {
+            "type": "Groupbox",
+            "name": "About Roblox X",
+            "order": 1,
+            "side": "Right",
+            "dependencyBoxes": [],
+            "elements": [
+              {
+                "visible": true,
+                "type": "Label",
+                "index": 1,
+                "text": "<font color=\"rgb(180, 180, 180)\">Version:</font> <b>2.4</b>",
+                "properties": {
+                  "addons": [],
+                  "doesWrap": false
+                }
+              },
+              {
+                "visible": true,
+                "type": "Label",
+                "index": 2,
+                "text": "<font color=\"rgb(180, 180, 180)\">Last Update:</font> <b>20:00 4/10/2025 european date</b>",
+                "properties": {
+                  "addons": [],
+                  "doesWrap": false
                 }
               },
               {
@@ -1300,22 +1591,163 @@
                 "visible": true,
                 "type": "Button",
                 "disabled": false,
-                "text": "Death Farm V2",
+                "text": "Join Our Community",
                 "index": 4,
                 "properties": {
                   "risky": false,
-                  "func": true
+                  "func": true,
+                  "tooltip": "Join our Discord for updates and support!"
+                }
+              }
+            ]
+          }
+        },
+        "Left": {
+          "Roblox X Team": {
+            "type": "Groupbox",
+            "name": "Roblox X Team",
+            "order": 1,
+            "side": "Left",
+            "dependencyBoxes": [],
+            "elements": [
+              {
+                "visible": true,
+                "type": "Label",
+                "index": 1,
+                "text": "<font color=\"rgb(0, 204, 255)\"><b>Owner & Lead Developer</b></font>",
+                "properties": {
+                  "addons": [],
+                  "doesWrap": false
                 }
               },
               {
                 "visible": true,
-                "type": "Button",
-                "disabled": true,
-                "text": "AutoKnob",
-                "index": 5,
+                "type": "Label",
+                "index": 2,
+                "text": "Roblox",
                 "properties": {
-                  "risky": false,
-                  "func": true
+                  "addons": [],
+                  "doesWrap": true
+                }
+              },
+              {
+                "visible": true,
+                "type": "Label",
+                "index": 3,
+                "text": "<font color=\"rgb(0, 204, 255)\"><b>Developer</b></font>",
+                "properties": {
+                  "addons": [],
+                  "doesWrap": false
+                }
+              },
+              {
+                "visible": true,
+                "type": "Label",
+                "index": 4,
+                "text": "thehuntersolo1",
+                "properties": {
+                  "addons": [],
+                  "doesWrap": true
+                }
+              },
+              {
+                "type": "Divider",
+                "index": 5,
+                "properties": []
+              },
+              {
+                "visible": true,
+                "type": "Label",
+                "index": 6,
+                "text": "<font color=\"rgb(0, 204, 255)\"><b>Special Thanks</b></font>",
+                "properties": {
+                  "addons": [],
+                  "doesWrap": false
+                }
+              },
+              {
+                "visible": true,
+                "type": "Label",
+                "index": 7,
+                "text": "koekis2, lekkie2",
+                "properties": {
+                  "addons": [],
+                  "doesWrap": true
+                }
+              },
+              {
+                "type": "Divider",
+                "index": 8,
+                "properties": []
+              },
+              {
+                "visible": true,
+                "type": "Label",
+                "index": 9,
+                "text": "<font color=\"rgb(0, 204, 255)\"><b>Community Contributors</b></font>",
+                "properties": {
+                  "addons": [],
+                  "doesWrap": false
+                }
+              },
+              {
+                "visible": true,
+                "type": "Label",
+                "index": 10,
+                "text": "Jack",
+                "properties": {
+                  "addons": [],
+                  "doesWrap": true
+                }
+              },
+              {
+                "type": "Divider",
+                "index": 11,
+                "properties": []
+              },
+              {
+                "visible": true,
+                "type": "Label",
+                "index": 12,
+                "text": "<font color=\"rgb(0, 204, 255)\"><b>ESP Library</b></font>",
+                "properties": {
+                  "addons": [],
+                  "doesWrap": false
+                }
+              },
+              {
+                "visible": true,
+                "type": "Label",
+                "index": 13,
+                "text": "mstudio45 esp library",
+                "properties": {
+                  "addons": [],
+                  "doesWrap": true
+                }
+              },
+              {
+                "type": "Divider",
+                "index": 14,
+                "properties": []
+              },
+              {
+                "visible": true,
+                "type": "Label",
+                "index": 15,
+                "text": "<font color=\"rgb(0, 204, 255)\"><b>NVCS-3000</b></font>",
+                "properties": {
+                  "addons": [],
+                  "doesWrap": false
+                }
+              },
+              {
+                "visible": true,
+                "type": "Label",
+                "index": 16,
+                "text": "made by Upio",
+                "properties": {
+                  "addons": [],
+                  "doesWrap": true
                 }
               }
             ]
@@ -1324,11 +1756,44 @@
         "Unknown": []
       }
     },
-    "Home": {
+    "Addons": {
+      "type": "MainTab",
+      "order": 7,
+      "dependencyGroupboxes": [],
+      "name": "Addons",
+      "tabboxes": {
+        "Right": [],
+        "Left": [],
+        "Unknown": []
+      },
+      "warningBox": {
+        "Visible": true,
+        "Title": "WARNING!",
+        "IsNormal": false,
+        "Text": "Dont download random addons, check if they are safe.",
+        "LockSize": true
+      },
+      "icon": "PlugIcon",
+      "groupboxes": {
+        "Right": [],
+        "Left": {
+          "Addons": {
+            "type": "Groupbox",
+            "name": "Addons",
+            "order": 1,
+            "side": "Left",
+            "dependencyBoxes": [],
+            "elements": []
+          }
+        },
+        "Unknown": []
+      }
+    },
+    "Start": {
       "type": "MainTab",
       "order": 1,
       "dependencyGroupboxes": [],
-      "name": "Home",
+      "name": "Start",
       "tabboxes": {
         "Right": [],
         "Left": [],
@@ -1338,7 +1803,7 @@
         "Visible": true,
         "Title": "Changelogs",
         "IsNormal": true,
-        "Text": "<font color=\"rgb(76, 0, 255)\">Release v2.3</font>\n- <font color=\"rgb(255, 165, 0)\">Fixed Anti A90</font>\n- <font color=\"rgb(255, 165, 0)\">Fixed Death Farm</font>\n- <font color=\"rgb(0, 255, 0)\">Added Infinite Items</font>\n- <font color=\"rgb(0, 255, 0)\">Added Infinite Crucifix</font>\n- <font color=\"rgb(0, 255, 0)\">Added Seek Path</font>\n- <font color=\"rgb(0, 255, 0)\">Added Seek Bridge Cover</font>\n- <font color=\"rgb(0, 255, 0)\">Added Remove Halloween Decoration</font>\n- <font color=\"rgb(0, 255, 0)\">Added Remove Halloween Fog</font>\n    ",
+        "Text": "<font color=\"rgb(76, 0, 255)\">Release v2.4</font>\n- <font color=\"rgb(0, 255, 0)\">Added Seek Path</font>\n- <font color=\"rgb(0, 255, 0)\">Added Seek Covered Bridges</font>\n- <font color=\"rgb(0, 255, 0)\">Added Seek ESP</font>\n- <font color=\"rgb(0, 255, 0)\">Added No Seek Flood Damage</font>\n- <font color=\"rgb(0, 255, 0)\">Added Auto Complete Dam (door 200)</font>\n\n- <font color=\"rgb(255, 165, 0)\">Fixed Anti Cheat Bypass</font>\n- <font color=\"rgb(255, 165, 0)\">Fixed FPS issues</font>\n- <font color=\"rgb(255, 165, 0)\">Fixed Auto Interact lag</font>\n- <font color=\"rgb(255, 165, 0)\">Fixed Instant Interact for weak execs</font>\n- <font color=\"rgb(255, 165, 0)\">Fixed Auto Breaker</font>\n- <font color=\"rgb(255, 165, 0)\">Fixed Anti Halt</font>\n- <font color=\"rgb(255, 165, 0)\">Fixed Anti Snare</font>\n- <font color=\"rgb(255, 165, 0)\">Fixed Anti Gloombat Eggs</font>\n- <font color=\"rgb(255, 165, 0)\">Fixed Anti Snare</font>\n\n- <font color=\"rgb(255, 0, 0)\">Removed Avoid Mandrake</font>\n- <font color=\"rgb(255, 0, 0)\">Removed more stuff I just don't remember</font>\n\n- <font color=\"rgb(0, 191, 255)\">Reorganized UI</font>\n    ",
         "LockSize": true
       },
       "icon": "HouseIcon",
@@ -1355,7 +1820,7 @@
                 "visible": true,
                 "type": "Label",
                 "index": 1,
-                "text": "<font color=\"rgb(0,255,255)\">Total Executions: 306</font>",
+                "text": "<font color=\"rgb(0,255,255)\">Total Executions: 465</font>",
                 "properties": {
                   "addons": [],
                   "doesWrap": false
@@ -1485,7 +1950,7 @@
                 "visible": true,
                 "type": "Label",
                 "index": 2,
-                "text": "Good night, Roblox",
+                "text": "Good evening, Roblox",
                 "properties": {
                   "addons": [],
                   "doesWrap": false
@@ -1518,235 +1983,6 @@
                   "doubleClick": false,
                   "risky": false,
                   "func": true
-                }
-              }
-            ]
-          }
-        },
-        "Unknown": []
-      }
-    },
-    "Addons": {
-      "type": "MainTab",
-      "order": 7,
-      "dependencyGroupboxes": [],
-      "name": "Addons",
-      "tabboxes": {
-        "Right": [],
-        "Left": [],
-        "Unknown": []
-      },
-      "warningBox": {
-        "Visible": true,
-        "Title": "WARNING!",
-        "IsNormal": false,
-        "Text": "Dont download random addons, check if they are safe.",
-        "LockSize": true
-      },
-      "icon": "PlugIcon",
-      "groupboxes": {
-        "Right": [],
-        "Left": {
-          "Addons": {
-            "type": "Groupbox",
-            "name": "Addons",
-            "order": 1,
-            "side": "Left",
-            "dependencyBoxes": [],
-            "elements": []
-          }
-        },
-        "Unknown": []
-      }
-    },
-    "Credits": {
-      "type": "MainTab",
-      "order": 6,
-      "dependencyGroupboxes": [],
-      "name": "Credits",
-      "tabboxes": {
-        "Right": [],
-        "Left": [],
-        "Unknown": []
-      },
-      "warningBox": {
-        "Visible": false,
-        "Title": "WARNING",
-        "IsNormal": false,
-        "Text": "",
-        "LockSize": false
-      },
-      "icon": "DatabaseIcon",
-      "groupboxes": {
-        "Right": {
-          "About Roblox X": {
-            "type": "Groupbox",
-            "name": "About Roblox X",
-            "order": 1,
-            "side": "Right",
-            "dependencyBoxes": [],
-            "elements": [
-              {
-                "visible": true,
-                "type": "Label",
-                "index": 1,
-                "text": "<font color=\"rgb(180, 180, 180)\">Version:</font> <b>2.3</b>",
-                "properties": {
-                  "addons": [],
-                  "doesWrap": false
-                }
-              },
-              {
-                "visible": true,
-                "type": "Label",
-                "index": 2,
-                "text": "<font color=\"rgb(180, 180, 180)\">Last Update:</font> <b>8:37 PM, 22 September, 2025</b>",
-                "properties": {
-                  "addons": [],
-                  "doesWrap": false
-                }
-              },
-              {
-                "type": "Divider",
-                "index": 3,
-                "properties": []
-              },
-              {
-                "visible": true,
-                "type": "Button",
-                "disabled": false,
-                "text": "Join Our Community",
-                "index": 4,
-                "properties": {
-                  "risky": false,
-                  "func": true,
-                  "tooltip": "Join our Discord for updates and support!"
-                }
-              }
-            ]
-          }
-        },
-        "Left": {
-          "Roblox X Team": {
-            "type": "Groupbox",
-            "name": "Roblox X Team",
-            "order": 1,
-            "side": "Left",
-            "dependencyBoxes": [],
-            "elements": [
-              {
-                "visible": true,
-                "type": "Label",
-                "index": 1,
-                "text": "<font color=\"rgb(0, 204, 255)\"><b>Owner & Lead Developer</b></font>",
-                "properties": {
-                  "addons": [],
-                  "doesWrap": false
-                }
-              },
-              {
-                "visible": true,
-                "type": "Label",
-                "index": 2,
-                "text": "Roblox",
-                "properties": {
-                  "addons": [],
-                  "doesWrap": true
-                }
-              },
-              {
-                "type": "Divider",
-                "index": 3,
-                "properties": []
-              },
-              {
-                "visible": true,
-                "type": "Label",
-                "index": 4,
-                "text": "<font color=\"rgb(0, 204, 255)\"><b>Special Thanks</b></font>",
-                "properties": {
-                  "addons": [],
-                  "doesWrap": false
-                }
-              },
-              {
-                "visible": true,
-                "type": "Label",
-                "index": 5,
-                "text": "koekis2, lekkie2",
-                "properties": {
-                  "addons": [],
-                  "doesWrap": true
-                }
-              },
-              {
-                "type": "Divider",
-                "index": 6,
-                "properties": []
-              },
-              {
-                "visible": true,
-                "type": "Label",
-                "index": 7,
-                "text": "<font color=\"rgb(0, 204, 255)\"><b>Community Contributors</b></font>",
-                "properties": {
-                  "addons": [],
-                  "doesWrap": false
-                }
-              },
-              {
-                "visible": true,
-                "type": "Label",
-                "index": 8,
-                "text": "Jack",
-                "properties": {
-                  "addons": [],
-                  "doesWrap": true
-                }
-              },
-              {
-                "type": "Divider",
-                "index": 9,
-                "properties": []
-              },
-              {
-                "visible": true,
-                "type": "Label",
-                "index": 10,
-                "text": "<font color=\"rgb(0, 204, 255)\"><b>ESP Library</b></font>",
-                "properties": {
-                  "addons": [],
-                  "doesWrap": false
-                }
-              },
-              {
-                "visible": true,
-                "type": "Label",
-                "index": 11,
-                "text": "mstudio45 esp library",
-                "properties": {
-                  "addons": [],
-                  "doesWrap": true
-                }
-              },
-              {
-                "visible": true,
-                "type": "Label",
-                "index": 12,
-                "text": "<font color=\"rgb(0, 204, 255)\"><b>NVCS-3000 made by Upio</b></font>",
-                "properties": {
-                  "addons": [],
-                  "doesWrap": false
-                }
-              },
-              {
-                "visible": true,
-                "type": "Label",
-                "index": 13,
-                "text": "mstudio45 esp library",
-                "properties": {
-                  "addons": [],
-                  "doesWrap": true
                 }
               }
             ]
@@ -1801,7 +2037,7 @@
                 "type": "Toggle",
                 "disabled": false,
                 "value": false,
-                "text": "Avoid Haste Screen Effects",
+                "text": "Anti Gloom Eggs",
                 "index": 2,
                 "properties": {
                   "changed": true,
@@ -1815,7 +2051,7 @@
                 "type": "Toggle",
                 "disabled": false,
                 "value": false,
-                "text": "Anti Gloom Eggs",
+                "text": "Anti Giggle",
                 "index": 3,
                 "properties": {
                   "changed": true,
@@ -1829,7 +2065,7 @@
                 "type": "Toggle",
                 "disabled": false,
                 "value": false,
-                "text": "Anti Giggle",
+                "text": "Avoid Hiding Edges",
                 "index": 4,
                 "properties": {
                   "changed": true,
@@ -1843,7 +2079,7 @@
                 "type": "Toggle",
                 "disabled": false,
                 "value": false,
-                "text": "Avoid Hiding Edges",
+                "text": "Avoid Figure",
                 "index": 5,
                 "properties": {
                   "changed": true,
@@ -1857,7 +2093,7 @@
                 "type": "Toggle",
                 "disabled": false,
                 "value": false,
-                "text": "Avoid Figure",
+                "text": "Avoid A-90",
                 "index": 6,
                 "properties": {
                   "changed": true,
@@ -1871,7 +2107,7 @@
                 "type": "Toggle",
                 "disabled": false,
                 "value": false,
-                "text": "Avoid A-90",
+                "text": "Avoid Surge",
                 "index": 7,
                 "properties": {
                   "changed": true,
@@ -1885,7 +2121,7 @@
                 "type": "Toggle",
                 "disabled": false,
                 "value": false,
-                "text": "Avoid Void Effect",
+                "text": "Avoid Halt",
                 "index": 8,
                 "properties": {
                   "changed": true,
@@ -1899,7 +2135,7 @@
                 "type": "Toggle",
                 "disabled": false,
                 "value": false,
-                "text": "Avoid Surge",
+                "text": "Avoid Lookman",
                 "index": 9,
                 "properties": {
                   "changed": true,
@@ -1913,7 +2149,7 @@
                 "type": "Toggle",
                 "disabled": false,
                 "value": false,
-                "text": "Avoid Halt",
+                "text": "Avoid Snare",
                 "index": 10,
                 "properties": {
                   "changed": true,
@@ -1927,7 +2163,7 @@
                 "type": "Toggle",
                 "disabled": false,
                 "value": false,
-                "text": "Avoid Lookman",
+                "text": "Avoid Seek Obstacles",
                 "index": 11,
                 "properties": {
                   "changed": true,
@@ -1941,7 +2177,7 @@
                 "type": "Toggle",
                 "disabled": false,
                 "value": false,
-                "text": "Avoid Snare",
+                "text": "Avoid Dupe",
                 "index": 12,
                 "properties": {
                   "changed": true,
@@ -1955,7 +2191,7 @@
                 "type": "Toggle",
                 "disabled": false,
                 "value": false,
-                "text": "Avoid Seek Arms & Chandeliers",
+                "text": "Avoid Vacuum",
                 "index": 13,
                 "properties": {
                   "changed": true,
@@ -1969,50 +2205,8 @@
                 "type": "Toggle",
                 "disabled": false,
                 "value": false,
-                "text": "Avoid Dupe",
-                "index": 14,
-                "properties": {
-                  "changed": true,
-                  "risky": false,
-                  "callback": true,
-                  "addons": []
-                }
-              },
-              {
-                "visible": true,
-                "type": "Toggle",
-                "disabled": false,
-                "value": false,
-                "text": "Avoid Vacuum",
-                "index": 15,
-                "properties": {
-                  "changed": true,
-                  "risky": false,
-                  "callback": true,
-                  "addons": []
-                }
-              },
-              {
-                "visible": true,
-                "type": "Toggle",
-                "disabled": false,
-                "value": false,
-                "text": "Avoid Mandrake",
-                "index": 16,
-                "properties": {
-                  "changed": true,
-                  "risky": false,
-                  "callback": true,
-                  "addons": []
-                }
-              },
-              {
-                "visible": true,
-                "type": "Toggle",
-                "disabled": false,
-                "value": false,
                 "text": "Avoid Eyes",
-                "index": 17,
+                "index": 14,
                 "properties": {
                   "changed": true,
                   "risky": false,
@@ -2097,254 +2291,18 @@
       "icon": "UserIcon",
       "groupboxes": {
         "Right": {
-          "Visual Effects": {
+          "Walkspeed": {
             "type": "Groupbox",
-            "name": "Visual Effects",
+            "name": "Walkspeed",
             "order": 1,
             "side": "Right",
             "dependencyBoxes": [],
             "elements": [
               {
                 "visible": true,
-                "type": "Toggle",
-                "disabled": false,
-                "value": false,
-                "text": "Fullbright",
-                "index": 1,
-                "properties": {
-                  "changed": true,
-                  "risky": false,
-                  "callback": true,
-                  "addons": [
-                    {
-                      "value": {
-                        "b": 255,
-                        "g": 255,
-                        "r": 255
-                      },
-                      "type": "ColorPicker",
-                      "title": "Color Tint"
-                    }
-                  ]
-                }
-              },
-              {
-                "visible": true,
-                "type": "Toggle",
-                "disabled": false,
-                "value": false,
-                "text": "Remove Fog",
-                "index": 2,
-                "properties": {
-                  "changed": true,
-                  "risky": false,
-                  "callback": true,
-                  "addons": []
-                }
-              },
-              {
-                "visible": true,
-                "type": "Button",
-                "disabled": false,
-                "text": "No Lag",
-                "index": 3,
-                "properties": {
-                  "risky": false,
-                  "func": true
-                }
-              },
-              {
-                "type": "Divider",
-                "index": 4,
-                "properties": []
-              },
-              {
-                "visible": true,
-                "type": "Toggle",
-                "disabled": false,
-                "value": false,
-                "text": "Third Person View",
-                "index": 5,
-                "properties": {
-                  "changed": true,
-                  "risky": false,
-                  "callback": true,
-                  "addons": [
-                    {
-                      "value": "V",
-                      "type": "KeyPicker",
-                      "mode": "Toggle",
-                      "text": "Third Person"
-                    }
-                  ]
-                }
-              },
-              {
-                "visible": true,
-                "type": "Slider",
-                "disabled": false,
-                "value": 19,
-                "text": "Third Person Distance",
-                "index": 6,
-                "properties": {
-                  "min": 5,
-                  "prefix": "",
-                  "compact": true,
-                  "max": 30,
-                  "suffix": "",
-                  "rounding": 0
-                }
-              },
-              {
-                "visible": true,
-                "type": "Slider",
-                "disabled": false,
-                "value": 0,
-                "text": "Third Person Side Offset",
-                "index": 7,
-                "properties": {
-                  "min": -5,
-                  "prefix": "",
-                  "compact": true,
-                  "max": 5,
-                  "suffix": "",
-                  "rounding": 1
-                }
-              },
-              {
-                "visible": true,
-                "type": "Slider",
-                "disabled": false,
-                "value": 0,
-                "text": "Third Person Height Offset",
-                "index": 8,
-                "properties": {
-                  "min": -5,
-                  "prefix": "",
-                  "compact": true,
-                  "max": 5,
-                  "suffix": "",
-                  "rounding": 1
-                }
-              },
-              {
-                "visible": true,
-                "type": "Slider",
-                "disabled": false,
-                "value": 70,
-                "text": "Field of View",
-                "index": 9,
-                "properties": {
-                  "min": 0,
-                  "prefix": "",
-                  "compact": true,
-                  "max": 120,
-                  "suffix": "",
-                  "rounding": 1
-                }
-              },
-              {
-                "visible": true,
-                "type": "Slider",
-                "disabled": false,
-                "value": 1,
-                "text": "Interaction Boost",
-                "index": 10,
-                "properties": {
-                  "min": 1,
-                  "prefix": "",
-                  "compact": true,
-                  "max": 2,
-                  "suffix": "",
-                  "rounding": 1
-                }
-              }
-            ]
-          },
-          "Automation": {
-            "type": "Groupbox",
-            "name": "Automation",
-            "order": 2,
-            "side": "Right",
-            "dependencyBoxes": [],
-            "elements": [
-              {
-                "visible": true,
-                "type": "Toggle",
-                "disabled": false,
-                "value": false,
-                "text": "Anti AFK",
-                "index": 1,
-                "properties": {
-                  "changed": true,
-                  "risky": false,
-                  "callback": true,
-                  "addons": []
-                }
-              },
-              {
-                "visible": true,
-                "type": "Toggle",
-                "disabled": false,
-                "value": false,
-                "text": "Anti-Cheat Manipulation",
-                "index": 2,
-                "properties": {
-                  "changed": true,
-                  "risky": false,
-                  "callback": true,
-                  "addons": [
-                    {
-                      "value": "T",
-                      "type": "KeyPicker",
-                      "mode": "Hold",
-                      "text": "Anti-Cheat Manipulation"
-                    }
-                  ]
-                }
-              },
-              {
-                "visible": true,
-                "type": "Toggle",
-                "disabled": false,
-                "value": false,
-                "text": "Solve Breaker Minigame",
-                "index": 3,
-                "properties": {
-                  "changed": true,
-                  "risky": false,
-                  "callback": true,
-                  "addons": []
-                }
-              },
-              {
-                "visible": true,
-                "type": "Button",
-                "disabled": false,
-                "text": "Solve Library Code",
-                "index": 4,
-                "properties": {
-                  "risky": false,
-                  "func": true,
-                  "tooltip": "solves the library code"
-                }
-              }
-            ]
-          }
-        },
-        "Left": {
-          "Walkspeed": {
-            "type": "Groupbox",
-            "name": "Walkspeed",
-            "order": 2,
-            "side": "Left",
-            "dependencyBoxes": [],
-            "elements": [
-              {
-                "visible": true,
                 "type": "Label",
                 "index": 1,
-                "text": "<font color=\"rgb(255,0,0)\">Speed Bypass: Inactive</font>",
+                "text": "<font color=\"rgb(0,255,0)\">Speed Bypass: Active</font>",
                 "properties": {
                   "addons": [],
                   "doesWrap": false
@@ -2401,29 +2359,22 @@
               }
             ]
           },
-          "Godmode": {
+          "Automation": {
             "type": "Groupbox",
-            "name": "Godmode",
-            "order": 1,
-            "side": "Left",
+            "name": "Automation",
+            "order": 2,
+            "side": "Right",
             "dependencyBoxes": [],
             "elements": [
               {
                 "visible": true,
-                "type": "Dropdown",
+                "type": "Button",
                 "disabled": false,
-                "value": "Toggle",
-                "text": "Godmode Mode",
+                "text": "Beat Door 200",
                 "index": 1,
                 "properties": {
-                  "multi": false,
-                  "values": [
-                    "Toggle",
-                    "Automatic",
-                    "Hold",
-                    "Always"
-                  ],
-                  "disabledValues": []
+                  "risky": false,
+                  "func": true
                 }
               },
               {
@@ -2431,28 +2382,49 @@
                 "type": "Toggle",
                 "disabled": false,
                 "value": false,
-                "text": "Godmode Toggle",
+                "text": "Anti AFK",
                 "index": 2,
                 "properties": {
                   "changed": true,
                   "risky": false,
                   "callback": true,
-                  "addons": [
-                    {
-                      "value": "K",
-                      "type": "KeyPicker",
-                      "mode": "Toggle",
-                      "text": "Position Spoof (Toggle)"
-                    }
-                  ]
+                  "addons": []
+                }
+              },
+              {
+                "visible": true,
+                "type": "Toggle",
+                "disabled": false,
+                "value": false,
+                "text": "Solve Breaker Minigame",
+                "index": 3,
+                "properties": {
+                  "changed": true,
+                  "risky": false,
+                  "callback": true,
+                  "addons": []
+                }
+              },
+              {
+                "visible": true,
+                "type": "Button",
+                "disabled": false,
+                "text": "Solve Library Code",
+                "index": 4,
+                "properties": {
+                  "risky": false,
+                  "func": true,
+                  "tooltip": "solves the library code"
                 }
               }
             ]
-          },
+          }
+        },
+        "Left": {
           "Movement": {
             "type": "Groupbox",
             "name": "Movement",
-            "order": 3,
+            "order": 2,
             "side": "Left",
             "dependencyBoxes": [],
             "elements": [
@@ -2528,11 +2500,32 @@
               },
               {
                 "visible": true,
+                "type": "Toggle",
+                "disabled": false,
+                "value": false,
+                "text": "Anti-Cheat Manipulation",
+                "index": 5,
+                "properties": {
+                  "changed": true,
+                  "risky": false,
+                  "callback": true,
+                  "addons": [
+                    {
+                      "value": "T",
+                      "type": "KeyPicker",
+                      "mode": "Hold",
+                      "text": "Anti-Cheat Manipulation"
+                    }
+                  ]
+                }
+              },
+              {
+                "visible": true,
                 "type": "Slider",
                 "disabled": false,
                 "value": 20,
                 "text": "Ladder Climb Speed",
-                "index": 5,
+                "index": 6,
                 "properties": {
                   "min": 0,
                   "prefix": "",
@@ -2548,7 +2541,7 @@
                 "disabled": false,
                 "value": 50,
                 "text": "Fly Speed",
-                "index": 6,
+                "index": 7,
                 "properties": {
                   "min": 0,
                   "prefix": "",
@@ -2556,6 +2549,54 @@
                   "max": 150,
                   "suffix": "",
                   "rounding": 0
+                }
+              }
+            ]
+          },
+          "Godmode": {
+            "type": "Groupbox",
+            "name": "Godmode",
+            "order": 1,
+            "side": "Left",
+            "dependencyBoxes": [],
+            "elements": [
+              {
+                "visible": true,
+                "type": "Dropdown",
+                "disabled": false,
+                "value": "Toggle",
+                "text": "Godmode Mode",
+                "index": 1,
+                "properties": {
+                  "multi": false,
+                  "values": [
+                    "Toggle",
+                    "Automatic",
+                    "Hold",
+                    "Always"
+                  ],
+                  "disabledValues": []
+                }
+              },
+              {
+                "visible": true,
+                "type": "Toggle",
+                "disabled": false,
+                "value": false,
+                "text": "Godmode Toggle",
+                "index": 2,
+                "properties": {
+                  "changed": true,
+                  "risky": false,
+                  "callback": true,
+                  "addons": [
+                    {
+                      "value": "K",
+                      "type": "KeyPicker",
+                      "mode": "Toggle",
+                      "text": "Position Spoof (Toggle)"
+                    }
+                  ]
                 }
               }
             ]
@@ -2718,7 +2759,9 @@
                 "properties": {
                   "multi": false,
                   "values": [
+                    "BACKDOORS",
                     "BEST HOTEL",
+                    "eeeee",
                     "HOTEL",
                     "THE MINES"
                   ],
